@@ -22,8 +22,8 @@ const Navbar = () => {
       </div>
 
       {/* Desktop menu */}
-      <ul className="hidden md:flex space-x-8 justify-center text-white text-sm font-medium">
-        <li className="hover:text-gray-400 cursor-pointer">Home</li>
+      <ul className="hidden md:flex space-x-8 justify-center text-white tracking-widest  text-sm font-medium">
+        <li className="hover:text-gray-400  cursor-pointer">Home</li>
         <li className="hover:text-gray-400 cursor-pointer">About</li>
         <li className="hover:text-gray-400 cursor-pointer">Filmography</li>
         <li className="hover:text-gray-400 cursor-pointer">Contact</li>
