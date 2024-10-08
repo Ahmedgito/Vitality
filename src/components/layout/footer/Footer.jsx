@@ -1,7 +1,7 @@
 import React from 'react';
-import { ReactComponent as FacebookIcon } from '../../../assets/footer/facebook.png';
-import { ReactComponent as InstagramIcon } from '../../../assets/footer/instagram.png';
-import { ReactComponent as TwitterIcon } from '../../../assets/footer/twitter.png';
+import   FacebookIcon   from '../../../assets/footer/facebook.png';
+import   InstagramIcon   from '../../../assets/footer/instagram.png';
+import  TwitterIcon   from '../../../assets/footer/twitter.png';
 
 const Footer = () => {
   return (
