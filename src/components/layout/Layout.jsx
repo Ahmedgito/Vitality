@@ -4,13 +4,13 @@ import Footer from "./footer/Footer";
 import { Helmet } from 'react-helmet';
 
 const Layout = ({ children }) => {
-  const [currentSection, setCurrentSection] = useState('Nizam Apparel');
+  const [currentSection, setCurrentSection] = useState('Shayan Khan');
   
   // Use ref to store all section elements
   const sectionRefs = useRef([]);
 
   useEffect(() => {
-    // Intersection Observer options
+    // Intersection Observer options    
     const options = {
       root: null,
       rootMargin: '0px',
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
       <div className="d-flex"></div>
 
       {/* Main content area */}
-      <main className="main-section" style={{ marginTop: "85px" }}>
+      <main className="main-section" >
         {/* Assuming children are the sections */}
         {React.Children.map(children, (child, index) =>
           React.cloneElement(child, { 

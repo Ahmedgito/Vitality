@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        sans: ['"Josefin Sans"', 'sans-serif'],
       },
       keyframes: {
         popIn: {
