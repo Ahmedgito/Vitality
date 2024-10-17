@@ -25,11 +25,18 @@ const Footer = () => {
       </div>
     </footer>
 
-    <footer className="bg-[#0F0F0F] font-sans text-[#e9debf] py-4 md:hidden flex flex-col items-center space-y-4">
+    <footer className="bg-[#065565] font-sans text-[#e9debf] py-4 md:hidden flex flex-col items-center space-y-4">
      
       
-      {/* Social Media Icons */}
-      <div className="flex mb-6 space-x-6">
+   
+
+     {/* Text */}
+     <div className="text-sm text-center leading-loose px-4">
+        © 2024 Vitality Residence. All Rights<br /> Reserved. 
+       
+      </div>
+   {/* Social Media Icons */}
+   <div className="flex mb-6 space-x-6">
         <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
           <img src={FacebookIcon} alt="Facebook" className="w-4 h-4 hover:opacity-70" />
         </a>
@@ -40,13 +47,6 @@ const Footer = () => {
           <img src={TwitterIcon} alt="Twitter" className="w-4 h-4 hover:opacity-70" />
         </a>
       </div>
-
-     {/* Text */}
-     <div className="text-sm text-center leading-loose px-4">
-        © 2024 Shayan Khan. All Rights<br /> Reserved. 
-        Designed and Developed <br /> by Mean3 Pvt Ltd.
-      </div>
-
 
     </footer>
 
