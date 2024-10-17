@@ -1,65 +1,103 @@
 import React, { useState } from 'react';
-import { FaBars } from 'react-icons/fa'; // You can use FontAwesome icons for the menu
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa'; // Icons for dropdown
+import Hamburger from 'hamburger-react';
+import h_img from '../../../assets/home/building.png';
+import logo from '../../../assets/header/vitality.svg';
+import img from '../../../assets/header/00.webp';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isFilmographyOpen, setIsFilmographyOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const toggleFilmography = () => {
-    setIsFilmographyOpen(!isFilmographyOpen);
-  };
+const HeaderWithTransparentNav = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-[#0F0F0F] h-20 w-full px-4 md:px-8 flex items-center justify-end md:justify-center sticky top-0 z-50">
-      {/* Hamburger Icon for mobile */}
-      <div className="text-white text-base md:hidden" onClick={toggleMenu}>
-        <FaBars />
+    <>
+    
+    <div className="relative md:block hidden">
+      {/* Header */}
+      <header className="sticky top-0 left-0 w-full z-50 bg-transparent">
+        <div className="flex justify-between items-center px-12 py-8">
+          {/* Logo */}
+          <div className="bg-[#065565]/80 animate-slideInLeft backdrop-blur-lg rounded-lg p-4">
+            <img src={logo} alt="Logo" className="w-24" />
+          </div>
+          
+          {/* Menu Icon */}
+          <div className="text-[#e9debf] animate-slideInRight text-3xl focus:outline-none">
+            <Hamburger
+              size={40}
+              toggled={menuOpen} 
+              toggle={setMenuOpen} 
+            />
+          </div>
+        </div>
+      </header>
+
+      {/* Sidebar Navigation */}
+      <div
+        className={`fixed inset-y-0 left-0 z-40 w-[40%] bg-black bg-opacity-30 backdrop-blur-lg transform ${
+          menuOpen ? 'translate-x-0' : '-translate-x-full'
+        } transition-transform duration-300`}
+      >
+        <div className="flex flex-col justify-center text-right items-end uppercase pr-10 pt-12 h-full text-[#e9debf] text-xl space-y-3">
+          <a href="/" className="hover:text-gray-300 transition duration-300">
+           Concept
+          </a>
+          <a href="/brand" className="hover:text-gray-300 transition duration-300">
+            Location
+          </a>
+          <a href="/collections" className="hover:text-gray-300 transition duration-300">
+            Architecture
+          </a>
+          <a href="/collections" className="hover:text-gray-300 transition duration-300">
+            Amenities
+          </a>
+          <a href="/releases" className="hover:text-gray-300 transition duration-300">
+            Lobby
+          </a>
+          <a href="/search-properties" className="hover:text-gray-300 transition duration-300">
+            Specifications
+          </a>
+          <a href="/news" className="hover:text-gray-300 transition duration-300">
+            Unit Types
+          </a>
+          <a href="/boutiques" className="hover:text-gray-300 transition duration-300">
+            Choose Apartments
+          </a>
+        </div>
       </div>
 
-      {/* Desktop menu */}
-      <ul className="hidden md:flex space-x-8 justify-center text-white tracking-widest  text-sm font-medium">
-        <li className="hover:text-gray-400  cursor-pointer">Home</li>
-        <li className="hover:text-gray-400 cursor-pointer">About</li>
-        <li className="hover:text-gray-400 cursor-pointer">Filmography</li>
-        <li className="hover:text-gray-400 cursor-pointer">Contact</li>
-        <li className="hover:text-gray-400 cursor-pointer">Blogs</li>
-        <li className="hover:text-gray-400 cursor-pointer">Media</li>
-      </ul>
+      {/* Main Content */}
+      <main>
+        <div className="relative -mt-60 h-[120vh]">
+          <img
+            src={img}
+            alt="Building Image"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </main>
 
-      {/* Mobile menu (dropdown) with sliding down animation */}
-      <div className={`absolute top-20 left-0 w-full bg-white uppercase text-black text-sm font-medium z-50 md:hidden overflow-hidden transition-max-height duration-500 ease-in-out ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
-        <ul>
-          <li className="pt-4 pb-2 mx-6 pl-1 border-b border-gray-200 hover:bg-gray-100 cursor-pointer">Home</li>
-          <li className="pt-4 pb-2 mx-6 pl-1 border-b border-gray-200 hover:bg-gray-100 cursor-pointer">About</li>
-
-          {/* Filmography with dropdown */}
-          <li onClick={toggleFilmography} className="pt-4 pb-2 pl-1 mx-6 border-b border-gray-200 hover:bg-gray-100 cursor-pointer flex justify-between items-center">
-            Filmography
-            {isFilmographyOpen ? <FaChevronUp /> : <FaChevronDown />}
-          </li>
-
-          {/* Filmography sublist */}
-          {isFilmographyOpen && (
-            <ul className="pl-10 uppercasebg-gray-100">
-              <li className="py-2 hover:text-gray-400 border-b border-gray-200 cursor-pointer">Money Back Guarantee</li>
-              <li className="py-2 hover:text-gray-400 border-b border-gray-200 cursor-pointer">Na Band Na Baraati</li>
-              <li className="py-2 hover:text-gray-400 border-b border-gray-200 cursor-pointer">Be Someone</li>
-            </ul>
-          )}
-
-          <li className="pt-4 pb-2 mx-6 pl-1 border-b border-gray-200 hover:bg-gray-100 cursor-pointer">Contact</li>
-          <li className="pt-4 pb-2 mx-6 pl-1 border-b border-gray-200 hover:bg-gray-100 cursor-pointer">Blogs</li>
-          <li className="pt-4 pb-2 mx-6 pl-1 border-b border-gray-200 hover:bg-gray-100 cursor-pointer">Media</li>
-        </ul>
-      </div>
-    </nav>
+      {/* Footer */}
+      <footer className="sticky bottom-0 left-0 w-full animate-slide-in-top bg-black bg-opacity-60 backdrop-blur-lg p-6">
+        <div className="flex justify-center space-x-6">
+          {/* Download Brochure Button */}
+          <a
+            href="/path-to-brochure.pdf"
+            download
+            className="bg-[#e9debf] text-black uppercase px-6 py-3 rounded-lg hover:bg-[#d1c4a1] transition duration-300"
+          >
+            Download Brochure
+          </a>
+          {/* Register Interest Button */}
+          <a
+            href="/register-interest"
+            className="bg-transparent border border-[#e9debf] text-[#e9debf] uppercase px-6 py-3 rounded-lg hover:bg-[#e9debf] hover:text-black transition duration-300"
+          >
+            Register Your Interest
+          </a>
+        </div>
+      </footer>
+    </div>
+    </>
   );
 };
 
-export default Navbar;
-
+export default HeaderWithTransparentNav;

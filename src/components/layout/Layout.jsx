@@ -4,7 +4,7 @@ import Footer from "./footer/Footer";
 import { Helmet } from 'react-helmet';
 
 const Layout = ({ children }) => {
-  const [currentSection, setCurrentSection] = useState('Shayan Khan');
+  const [currentSection, setCurrentSection] = useState('Vitality');
   
   // Use ref to store all section elements
   const sectionRefs = useRef([]);
@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Helmet>
-        <title>{currentSection} - Shayan Khan | Best Pakistani Actor & Film Producer </title>
+        <title>{currentSection} - In the Heart of Dubai </title>
         <meta name="description" content="Best Pakistani Actor & Film Producer " />
         <meta name="keywords" content="Actor,Film,Producer,Movie,FilmProducer,Fashion" />
       </Helmet>
