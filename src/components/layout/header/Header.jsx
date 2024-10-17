@@ -37,29 +37,21 @@ const HeaderWithTransparentNav = () => {
         >
           <div className="flex flex-col justify-center text-right items-end uppercase pr-10 pt-12 h-full text-[#e9debf] text-xl space-y-3">
             <a href="/" className="hover:text-gray-300 transition duration-300">
-              Concept
+              Coming Soon
             </a>
             <a href="/brand" className="hover:text-gray-300 transition duration-300">
-              Location
+              Coming Soon
             </a>
             <a href="/collections" className="hover:text-gray-300 transition duration-300">
-              Architecture
+              Coming Soon
             </a>
             <a href="/collections" className="hover:text-gray-300 transition duration-300">
-              Amenities
+             Coming Soon
             </a>
             <a href="/releases" className="hover:text-gray-300 transition duration-300">
-              Lobby
+            Coming Soon
             </a>
-            <a href="/search-properties" className="hover:text-gray-300 transition duration-300">
-              Specifications
-            </a>
-            <a href="/news" className="hover:text-gray-300 transition duration-300">
-              Unit Types
-            </a>
-            <a href="/boutiques" className="hover:text-gray-300 transition duration-300">
-              Choose Apartments
-            </a>
+           
           </div>
         </div>
 
@@ -125,29 +117,21 @@ const HeaderWithTransparentNav = () => {
         >
           <div className="flex flex-col justify-center text-left items-start uppercase pl-6 pt-12 h-full text-[#e9debf] text-lg space-y-4">
             <a href="/" className="hover:text-gray-300 transition duration-300">
-              Concept
+            Coming Soon
             </a>
             <a href="/brand" className="hover:text-gray-300 transition duration-300">
-              Location
+            Coming Soon
             </a>
             <a href="/collections" className="hover:text-gray-300 transition duration-300">
-              Architecture
+            Coming Soon
             </a>
             <a href="/collections" className="hover:text-gray-300 transition duration-300">
-              Amenities
+            Coming Soon
             </a>
             <a href="/releases" className="hover:text-gray-300 transition duration-300">
-              Lobby
+            Coming Soon
             </a>
-            <a href="/search-properties" className="hover:text-gray-300 transition duration-300">
-              Specifications
-            </a>
-            <a href="/news" className="hover:text-gray-300 transition duration-300">
-              Unit Types
-            </a>
-            <a href="/boutiques" className="hover:text-gray-300 transition duration-300">
-              Choose Apartments
-            </a>
+          
           </div>
         </div>
 

@@ -8,9 +8,9 @@ const Footer = () => {
 
     <>
 
-    <footer className="bg-[#0F0F0F] font-sans  text-white py-4 md:flex hidden justify-between items-center h-20 px-8 md:px-16">
+    <footer className="bg-[#065565] font-sans  text-[#e9debf] py-4 md:flex hidden justify-between items-center h-20 px-8 md:px-16">
       <div className="text-sm   ">
-        © 2024 Shayan Khan.All Rights Reserved. Designed and Developed by Mean3 Pvt Ltd.
+        © 2024 Vitality Residence.All Rights Reserved.
       </div>
       <div className="flex space-x-8">
         <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
@@ -25,7 +25,7 @@ const Footer = () => {
       </div>
     </footer>
 
-    <footer className="bg-[#0F0F0F] font-sans text-white py-4 md:hidden flex flex-col items-center space-y-4">
+    <footer className="bg-[#0F0F0F] font-sans text-[#e9debf] py-4 md:hidden flex flex-col items-center space-y-4">
      
       
       {/* Social Media Icons */}
