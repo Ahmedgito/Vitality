@@ -6,7 +6,7 @@ const Section1 = React.forwardRef((props, sectionRef) => {
     <section className="bg-[#1a1a1a] text-[#e9debf] py-16 px-8 relative">
       <div className="max-w-7xl mx-auto text-center">
         {/* Title */}
-        <h2 className="text-4xl font-bold uppercase mb-8 animate-slideInLeft">
+        <h2 className="text-5xl font-thin uppercase mb-8 animate-slideInLeft">
           About Us
         </h2>
 
@@ -15,7 +15,7 @@ const Section1 = React.forwardRef((props, sectionRef) => {
         </p>
 
         {/* Image and Key Values */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8 items-center">
+        <div className="flex justify-center  mt-8 items-center">
           {/* Creative Image with Parallax/Overlay */}
           <div className="relative animate-slideInLeft">
             <img
@@ -26,26 +26,6 @@ const Section1 = React.forwardRef((props, sectionRef) => {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1a1a1a]/80 rounded-lg"></div>
           </div>
 
-          <div className="space-y-6 animate-slideInRight">
-            <div className="flex items-start space-x-4">
-              <div className="text-2xl">🏛️</div>
-              <p className="text-left">
-                <strong>Architectural Excellence:</strong> We collaborate with world-renowned architects to deliver projects that are both aesthetically beautiful and functionally superior.
-              </p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="text-2xl">🌿</div>
-              <p className="text-left">
-                <strong>Sustainability:</strong> Our commitment to green building practices ensures that our developments are environmentally responsible and energy-efficient.
-              </p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="text-2xl">🤝</div>
-              <p className="text-left">
-                <strong>Customer-Centric Approach:</strong> We place the utmost importance on our clients’ needs and ensure personalized service every step of the way.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
